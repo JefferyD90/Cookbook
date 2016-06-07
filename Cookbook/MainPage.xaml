@@ -8,12 +8,17 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height=".8*" />
-            <RowDefinition Height=".2*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height=".6*"
+                           MinHeight="64" />
+            <RowDefinition Height="32" />
+            <RowDefinition Height="1*"
+                           MinHeight="96" />
+            <RowDefinition Height="1*"
+                           MinHeight="96" />
+            <RowDefinition Height="1*"
+                           MinHeight="96" />
+            <RowDefinition Height="1*"
+                           MinHeight="96" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -43,5 +48,21 @@
                Margin="10"
                Grid.Row="5"
                Source="Assets/Square150x150Logo.png" />
+        <TextBox x:Name="searchBox"
+                 Grid.Column="1"
+                 Grid.RowSpan="2"
+                 TextWrapping="Wrap"
+                 Text="Search"
+                 Height="32"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,10,0" />
+        <Button x:Name="button"
+                Content="Search"
+                HorizontalAlignment="Right"
+                Margin="0,0,10,0"
+                Grid.RowSpan="2"
+                VerticalAlignment="Bottom"
+                Height="32"
+                Width="64" />
     </Grid>
 </Page>
